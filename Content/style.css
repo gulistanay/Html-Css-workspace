@@ -1,0 +1,94 @@
+h2,h3,h4{       /* birden fazla elementi virgül ile birleştirebiliyoruz.*/
+    color: purple;
+    font-family: cursive;
+}
+
+ /* Tabloda kenarlık işlemleri*/
+table td{   /* td siz yazarsak iç çizgiler olmaz */
+    
+    border-color: green;
+    border-style:solid;
+    border-width: 2px;
+    
+    /* Bunun yerine tek satırda da yazılabilir: 
+       border: 1px solid green;
+    */
+}
+
+/* Tablodaki yazıları ortalamak- hizalamak için: */
+td{
+    padding: 30px 150px 30px 150px;      /* padding 4 farklı değer alır: üst-sağ-alt-sol (bu sırayla) padding: 4px 7px 4px 4px Bunlar aynı olacaksa tek değer vermek yeterli*/
+    text-align: center;  /* Yatay ve dikey hizalama*/
+    vertical-align:auto;
+}
+
+/* Tabloda başlıklarının arkaplan renkleri */
+th{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+/* 
+    HTML'de oluşturduğumuz sayfada 2 farklı yerde ul etiketi kullanmıştık.
+    Yalnızca tablodaki maddelemede değişiklik yapmak için class selector kullanıyoruz
+    CSS'de class tanımlamak i.in kullanacağımız ismin önüne "." koymak yeterli
+
+    Sonrasında bu stili uygulayacak elementlerin class atribute lerine sayfasayisivetur sınıfını atamalıyız.
+*/
+.Sayfasayisivetur{
+    text-align: left;  /* sola dayalı */
+    color: gray;
+    font-family: serif;
+    list-style: square;
+}
+
+/* 
+    Sayfada eşsiz olan bir elementi diğerlerinden ayırmak için "id" elementini kullanıyoruz.
+    HTML kısmında id yi ekledikten sonra, burada id değerini selector olarak kullanmak istediğimizde "#" kullanıyoruz.
+    Böylece id si menu olan element demiş oluyoruz
+*/
+#menu
+{
+    list-style: none;  /* Listeleme işaretini kaldırmak için none yaptık*/
+    font-family: Arial;
+    display: block;
+}
+
+/* Menü elemanlarının alt alta değil yan yana olmasını istiyorsak:
+id si menu olan elemente ait tüm childs elementleri dahil etmek istediğimizde ">" kullanıyoruz
+*/
+#nav > #menu > li{   
+    float: left;    /* Tarayıcı belirttiğimiz list item ları çizmeye soldan başlayacak.*/
+   /* display: inline; */ /*Bütün li leri aynı satırda toplar */
+    border: 1px solid black; /*Çerçeve ekledik Elementin dış boşluğunu ayarlamak için margin değiştirmeliyiz, padding gibi çalışır */
+    margin: 20px;  
+    padding: 10px 5px 10px 10px; /*top, right, bottom, left*/  /*Linkler list itemın kenarlarına yapışmış duurmda gelince paddingi de değiştiriyoruz */
+    width: 300px;               /* Tüm itemları aynı boya getirmek için width ve height ı değiştiriyoruz, display öz. inline old. için değişiklik olmaz */
+    height: 50px;
+    text-align: center;
+    position: relative;
+    list-style: none; 
+    display: inline;
+}
+
+a:link{     /* Pseude selector. Link, visited, hover şeklinde sıralanmalı. Sıralama önemli! */
+    color: navy;
+    text-decoration: none;
+    font-style: italic;
+}
+a:visited{
+    color:rebeccapurple;
+    text-decoration: none;
+}
+a:hover{        /* Hover: Üzerine gelindiğinde. */
+    color: navy;
+    font-style:normal ;
+    text-decoration: underline;   /* Üzerine gelindiğinde altı çizili olsun*/
+    font-size: large;  
+}
+
+/*Pseudo selectorler birçok elemente uygulanabilir.Örneğin list itemların üzerine geldiğimizde kenar renginin kırmızı olmasını sağlayabiliriz. */
+#menu > li:hover{   /* Menu id li kısma ait list itemların hover durumunda */
+border-color:purple;
+}

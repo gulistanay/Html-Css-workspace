@@ -1,0 +1,84 @@
+/* div{
+    border: 1px solid black; 
+}  */
+#header{
+    width: 100%; /* px olarak girdiğimizde tarayıcıyı küçültüp büyültmek ilgili elementi etkilemez
+                    ancak  %, tarayıcının açık olan kısmının yüzde kaçını kaplayacağını belirtir. %'yi tercih ediyoruz */
+    /*  height: 100px;İçerik eklenince silinecek */  
+}
+#logo{
+    float: left; /*İç içe yapılarda elementin nereye yaslanacağını belirtmeliyiz */
+    width: 15%;  /*başlık, logo ve sosyalin toplamı %100 olmalı */
+    height: 50px; 
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.heading{
+    float: left;
+    width: 65%;
+    height: 80px;
+    text-align: center; /* Yatayda ortalıyoruz */
+}
+#social{
+    float: right;
+    width: 18%; /* Aradaki boşlukları da hesaba kattık */
+    height: 80px;
+    margin-top: 20px;
+}
+.account{
+    float: left; /* Sola dayalı */
+    width: 20%;
+    margin-top: 20px;  /* üst boşluk */
+    margin-left: 20px;  /* sol boşluk */
+    height: 50px;
+}
+#nav{
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 90px;
+    /* margin-bottom: 20px; */
+    display:inline-flex ; /* menü elemanlarının yan yana olmasını istiyoruz */
+}
+
+#container{
+    background-color: #eeeef2 ;
+    width: 100%;
+    padding: 5px; /* tüm iç boşlukların sabit olmasını istiyoruz */
+}
+#jumbo{
+    width: 100%;
+   /* height: 300px;  */
+}
+.content{
+    float: left;
+    width: 70%;
+    text-align: left;
+    height: 300px;
+    padding-left: 80px;
+}
+.list{
+    background-color: #c2adad ;
+    color: white;
+    float: left;
+    width: 18%;
+    /* height: 300px; */
+    padding-left: 15px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.table{  /* Bu alan tam ekranı kaplamıyor ve tam ortada yer alıyor */
+    width: 100%;
+    margin: 50px;  /* sağ ve sol boşlukları eşit yaparak div elementini ortalayabiliriz. */
+    text-align: center;
+    /* height: 300px; */
+    clear: both; /* bunsuz iç içe geçmiş durumdaydı, float öz. dolayı. */
+}
+#comments{
+    width: 100%;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}

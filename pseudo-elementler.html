@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML 3 Çalışma</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML ve CSS Pseudo Seçiciler">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Gülistan Ay">
+    <style>
+        div {
+            display: block;
+            margin-left: 30px;
+            
+        }
+        
+        th {
+            /* Tablo başlıkları */
+            background-color: black;
+            color: white;
+            font-weight: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Başlıklarda kolonlar arasındaki beyaz çizgileri kaldırmak için */
+        }
+        
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        td {
+            text-align: center;
+            /* Yatay ve dikey hizalama*/
+            vertical-align: middle;
+        }
+        
+        tr:nth-child(even) {
+            /* Zebra stili, tr elementinin içinde sırası çift sayı olanlar. */
+            background-color: royalblue;
+            /* Çift sayıların arkaplanını mavi yaptık */
+            color: black;
+        }
+        
+        tr:nth-child(odd) {
+            /* Zebra stili, tr elementinin içinde sırası tek sayı olanlar. */
+            background-color: lightblue;
+            /* Tek sayıların arkaplanı*/
+            color: black;
+        }
+        /*Satırın üzerine gelinme durumu */
+        
+        tr:hover {
+            background-color: gray;
+            font-weight: bold;
+            color: white;
+        }
+        
+        tr:hover::after {
+            /* üstüne gelindiğinde satır sonuna icon ekleyeceğiz.  */
+            content: url(images/11922-backhand-index-pointing-left-light-skin-tone-icon.png);
+        }
+        
+        body {
+            background-image: url("paper.gif");  /* Sayfa arkaplanına resim ekleme */
+            background-repeat: repeat-y;    /*Eklediğin resmi döndürme, dikey yapma */
+            background-repeat: no-repeat;
+            background-position: top right;  /*  Arka plan resminin sağ üst köşede bir kez gösterilmesi */
+            /* Kısa yolu*/
+            background: url("paper.gif") no-repeat top right;
+        }
+
+        /* Paragrafın ilk halini büyük ve vurgulu yapma işlemi 
+        p:first-letter{                /* Tüm paragraflara uygular 
+            color: rebeccapurple;       
+            font-family: Impact ;
+            font-size: 50px;
+        } */
+
+       p:first-of-type::first-letter {                /* Sadece ilk paragrafa uygular */
+            color: rebeccapurple;       
+            font-family: Impact ;
+            font-size: 50px;
+        }
+        
+
+    </style>
+</head>
+
+<h3>Üyeler Tablosu</h3>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Adı</th>
+                <th>Soyadı</th>
+                <th>Üyelik Tarihi</th>
+                <th>Puan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>ad</td>
+                <td>soyad</td>
+                <td>16.02.2021</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aliquid modi nesciunt quia tenetur, odio neque asperiores unde, magnam nostrum reiciendis itaque quasi eaque mollitia excepturi placeat esse fuga officia. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Maxime veniam necessitatibus facilis asperiores, magnam eos quasi architecto eum sunt voluptates dignissimos reiciendis ab, eligendi culpa, quia id totam recusandae? Soluta. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Odio ipsa accusantium laudantium aut cum perferendis soluta quam! Distinctio, ipsum enim. Aliquid saepe ducimus neque recusandae eveniet exercitationem ad vero. Sit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati maxime
+        reiciendis qui aliquid optio rem minus fugiat cumque! Eveniet corrupti sapiente cum dicta sed voluptate enim perspiciatis reprehenderit totam. Consequuntur!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam labore pariatur voluptates itaque maiores facilis laudantium eius officia quaerat nobis velit corrupti sunt, vero alias iusto omnis minus expedita consequatur! Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Vel accusamus optio, obcaecati tenetur illum, aliquam harum at omnis, ducimus quos qui? Quisquam provident dolorum, esse blanditiis dolor tenetur nobis officia!</p>
+
+</body>
+
+</html>

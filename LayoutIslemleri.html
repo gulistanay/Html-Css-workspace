@@ -1,0 +1,151 @@
+<!-- Önce mock-up oluşturuyoruz. Sitenin tasarımına kolayca karar verip, daha hızlı uygulayabilmek için.
+Mock-uptaki her bir bölüme division: div diyoruz.
+Bu yapıları html'de oluşturmaya en dış kutulardan başlıyoruz.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Layout İşlemleri</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Layout">
+    <meta name="keywords" content="HTML, CSS, layout">
+    <meta name="author" content="Gülistan Ay">
+    <link rel="stylesheet" href="Content/layout.css">
+    <link rel="stylesheet" href="Content/style.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="images/kisspng-book-drawing-clip-art-book-spine-5b219279bceaa5.4631144415289268417738.png" alt="logo" style="height: 70px; width: 70px;" />
+
+        </div>
+        <div class="heading">
+            <h1 style="border: 0; font-size: 45px;">KİTAP DÜNYASI</h1>
+        </div>
+        <!--Tekrar edebilecek özellikleri class olarak tanımlıyoruz-->
+        <div id="social">
+            <div class="account">
+                <a href="https://tr-tr.facebook.com/" target="_blank"><img src="images/Facebook-icon.png" alt="Facebook" style="width: 40px; height: 40px;"> </a>
+            </div>
+            <!-- Buradaki 3 kutu tekrar ettiği için social divinin içine aynı classtan üç tane div elementi ekliyoruz-->
+            <div class="account">
+                <a href="https://twitter.com" target="_blank"><img src="images/Twitter-icon.png" alt="Twitter" style="width: 40px; height: 40px;"> </a>
+            </div>
+            <div class="account">
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/Instagram-icon.png" alt="Instagram" style="width: 40px; height: 40px;"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <ul id="menu" >
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+    </div>
+    <div id="container">
+        <!--Container: Taşıyıcı-->
+        <div id="jumbo">
+            <img src="images/kütüphane.jpg" alt="Kütüphane">
+
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Metin</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptates necessitatibus dolor, saepe voluptatem voluptatibus fugiat beatae labore maiores nihil, vero illum commodi autem excepturi libero aut. Saepe, eius voluptatem! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Eius aliquid amet, eaque unde fugiat maiores voluptate iste. Placeat iusto libero veniam nostrum tempora, ab ipsam eum ipsum et saepe illo. Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Eveniet itaque, esse beatae rerum atque consequatur. Impedit ut quisquam aperiam aliquam rerum error ullam? Eius, omnis. Quasi aut natus ducimus totam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptates necessitatibus dolor, saepe voluptatem voluptatibus fugiat beatae labore maiores nihil, vero illum commodi autem excepturi libero aut. Saepe, eius voluptatem! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Eius aliquid amet, eaque unde fugiat maiores voluptate iste. Placeat iusto libero veniam nostrum tempora, ab ipsam eum ipsum et saepe illo. Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Eveniet itaque, esse beatae rerum atque consequatur. Impedit ut quisquam aperiam aliquam rerum error ullam? Eius, omnis. Quasi aut natus ducimus totam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptates necessitatibus dolor, saepe voluptatem voluptatibus fugiat beatae labore maiores nihil, vero illum commodi autem excepturi libero aut. Saepe, eius voluptatem! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Eius aliquid amet, eaque unde fugiat maiores voluptate iste. Placeat iusto libero veniam nostrum tempora, ab ipsam eum ipsum et saepe illo. Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Eveniet itaque, esse beatae rerum atque consequatur. Impedit ut quisquam aperiam aliquam rerum error ullam? Eius, omnis. Quasi aut natus ducimus totam.</p>
+        </div>
+        
+        <div class="list">
+            <h2>İkinci Başlık - Sırasız Liste </h2>
+            <ul>
+                <li>HTML</li>
+                <li>PHP</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+
+            <h2>Üçüncü Başlık - Sıralı Liste</h2>
+            <ol>
+                <li>One Day</li>
+                <li>Me Before You</li>
+                <li>Çalıkuşu</li>
+                <li>Mai ve Siyah</li>
+                <li>Gurur ve Önyargı</li>
+            </ol>
+        </div>
+
+        
+
+        <div class="table">
+            <h3>Kitaplar Tablosu </h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Yazarı</th>
+                    <th>Sayfa Sayısı ve Tür</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Çalıkuşu</td>
+                    <td>Reşat Nuri Güntekin</td>
+                    <td>
+                        <ul>
+                            <li>450</li>
+                            <li>Türk Edebiyatı</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gurur ve Önyargı</td>
+                    <td>Jane Austen</td>
+                    <td>
+                        <ul>
+                            <li>560</li>
+                            <li>Dünya Klasiği</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sefiller</td>
+                    <td>Victor Hugo</td>
+                    <td>
+                        <ul>
+                            <li>1700</li>
+                            <li>Hasan Ali Yücel Klasiği</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </div>
+        <div id="comments">
+            <h3>Yorumlar</h3>
+            <ul>
+                <li>yorum1</li>
+                <li>yorum2</li>
+                <li>yorum3</li>
+            </ul>
+        </div>
+        <!--Yorumlar sabit olduğu için id kullandık-->
+    </div>
+    <div id="footer">© 2021 Gülistan AY</div>
+
+    <!--Div'lerin görünümünü css ile ayarlıyoruz-->
+</body>
+
+</html>
